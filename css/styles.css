@@ -424,4 +424,13 @@ a[target="_blank"]{
         font-size: 1rem;
     }
 }
+/* =====================================
+   CONFLICTO 1: ESPECIFICIDAD
+===================================== */
+.servicios__tarjeta p {
+    color: black;
+}
+.servicios__tarjeta--destacada p {
+    color: green;
+}
 
