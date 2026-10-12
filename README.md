@@ -273,29 +273,46 @@ Esto permite definir estilos generales para el sitio y aplicar propiedades espec
 
 ## 7. Modelo de cajas
 
-En CSS, cada elemento se representa mediante un modelo de cajas compuesto por cuatro partes:
+En CSS, cada elemento de una página web se representa mediante el modelo de cajas (*Box Model*). Este modelo permite comprender cómo se distribuye el espacio de cada elemento y cómo influyen sus dimensiones en el diseño.
 
-- **Content:** contenido del elemento.
-- **Padding:** espacio interior entre el contenido y el borde.
-- **Border:** borde que delimita la caja.
-- **Margin:** espacio exterior que separa el elemento de otros elementos.
+El modelo está compuesto por cuatro partes:
 
-### Ejemplo aplicado a una tarjeta
+- **Content (contenido):** contiene el texto, las imágenes u otros elementos.
+- **Padding (relleno):** espacio interior entre el contenido y el borde.
+- **Border (borde):** línea que rodea el contenido y el relleno.
+- **Margin (margen):** espacio exterior que separa un elemento de los demás.
+
+### 7.1. Aplicación en AE Floristería y Eventos
+
+El modelo de cajas se utiliza en las tarjetas de servicios para organizar las imágenes, los textos y los espacios interiores. También permite separar las tarjetas y darles una apariencia ordenada.
+
+En el archivo `css/styles.css` se utiliza la siguiente regla:
 
 ```css
 .servicios__tarjeta {
+    background: white;
     padding: 1.5rem;
     border-top: 3px solid var(--color-secundario);
     border-right: 1px solid var(--color-borde);
     border-bottom: 1px solid var(--color-borde);
     border-left: 1px solid var(--color-borde);
-    margin: 1rem;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    transition: var(--transicion);
 }
 ```
 
-### Cálculo del ancho total
+En esta tarjeta:
 
-Como ejemplo, se considera una caja con un contenido de 280 píxeles, un `padding` horizontal de 24 píxeles por lado y un borde de 1 píxel por lado.
+- **Contenido:** la imagen, el título y la descripción del servicio.
+- **Padding:** `1.5rem` de espacio interior en cada lado.
+- **Border:** borde superior dorado de `3px` y bordes restantes de `1px`.
+- **Margin:** separación exterior que puede depender de las reglas de diseño y del espacio entre tarjetas.
+
+### 7.2. Cálculo del ancho de una tarjeta
+
+Para comprender el cálculo, se utiliza un ejemplo ilustrativo con un ancho de contenido de `280px`, un relleno horizontal de `24px` por lado y un borde de `1px` por lado.
 
 | Elemento | Medida |
 |---|---:|
@@ -308,11 +325,11 @@ Cálculo:
 
 `280 px + 48 px + 2 px = 330 px`
 
-Este ejemplo es ilustrativo. Para documentar una caja real del proyecto, se deben sustituir las medidas por las que se observen en el inspector del navegador.
+Este cálculo corresponde al modelo predeterminado `content-box`. Las medidas reales de las tarjetas pueden variar según el ancho disponible, el contenido y las reglas CSS aplicadas.
 
-### Uso de `box-sizing`
+### 7.3. Uso de `box-sizing`
 
-Cuando se utiliza:
+La propiedad `box-sizing` permite controlar cómo se calculan las dimensiones de los elementos.
 
 ```css
 * {
@@ -320,15 +337,15 @@ Cuando se utiliza:
 }
 ```
 
-El ancho y el alto establecidos mediante `width` y `height` incluyen el contenido, el padding y el borde, lo que facilita el control de las dimensiones de los elementos.
+Con `border-box`, el ancho y el alto definidos mediante `width` y `height` incluyen el contenido, el relleno y los bordes. Esto facilita la distribución de los elementos y ayuda a evitar desbordamientos.
 
-### Márgenes verticales
+### 7.4. Evidencia del modelo de cajas
 
-Los márgenes verticales de ciertos elementos de bloque pueden colapsar. Por ejemplo, cuando dos márgenes verticales positivos adyacentes colapsan, uno de `2rem` y otro de `3rem` pueden producir un espacio de `3rem` en lugar de `5rem`.
+**Archivo:** `capturas/14-modelo-cajas.png`
 
-Este comportamiento debe comprobarse en los elementos reales del sitio antes de presentarlo como un problema observado.
+![Modelo de cajas de una tarjeta de servicios](capturas/14-modelo-cajas.png)
 
----
+Esta evidencia muestra una tarjeta de servicios del sitio web y el modelo de cajas identificado mediante el inspector del navegador.
 
 ## 8. Diseño responsive
 
@@ -359,8 +376,6 @@ Esta regla modifica la dirección de los elementos de navegación cuando el anch
 - Ajustes de tipografía y dimensiones cuando son necesarios.
 
 ### Comprobaciones responsive
-
-Se debe comprobar el comportamiento de ambas páginas en el navegador utilizando las herramientas de desarrollo.
 
 **Captura de la página principal en escritorio:**
 
@@ -464,7 +479,7 @@ El texto se mostrará con un tamaño de `1.05rem`, siempre que ninguna otra decl
 
 ## 10. Problemas encontrados y soluciones
 
-Esta sección documenta problemas y posibles soluciones durante el desarrollo. Cada caso debe coincidir con lo que realmente ocurrió y con los cambios que se aplicaron.
+Esta sección documenta problemas y posibles soluciones durante el desarrollo.
 
 ### Problema 1. Diferencias en el tamaño de las imágenes
 
@@ -602,13 +617,11 @@ Se muestra el conflicto entre un selector de etiquetas y otro que incluye una cl
 
 Se presenta el inspector de elementos con las declaraciones CSS y la regla que prevalece.
 
-**Nota:** las imágenes de esta sección deben existir realmente en la carpeta `capturas/`. Si un archivo tiene otro nombre, actualiza la ruta en este documento. Elimina las referencias que no correspondan a capturas que hayas realizado.
-
 ---
 
 ## 12. Publicación del proyecto
 
-**Repositorio público de GitHub:** [Pegar aquí la URL del repositorio]
+**Repositorio público de GitHub:** Repositorio https://github.com/ingyurlygonzalezdulcey-creator/aefloristeriayeventos
 
 **Sitio publicado en GitHub Pages:** [Pegar aquí la URL del sitio]
 
