@@ -334,39 +334,148 @@ Se implementó una Media Query para pantallas de 360 píxeles.
 
 # 11. Evidencias
 
-Agregar las siguientes capturas de pantalla:
+Todas las capturas se encuentran dentro de la carpeta:
 
-### Captura 1
-Página principal.
+```text
+capturas/
+```
 
-### Captura 2
-Sección de servicios.
+## Captura 1 - Página principal
 
-### Captura 3
-Video decorativo.
+![Pturas/01-index.png
 
-### Captura 4
-Página servicios.html.
-
-### Captura 5
-Tabla de precios.
-
-### Captura 6
-Formulario de contacto.
-
-### Captura 7
-Vista responsive en 360 px.
-
-### Captura 8
-Conflicto de especificidad 1.
-
-### Captura 9
-Conflicto de especificidad 2.
-
-### Captura 10
-Conflicto de especificidad 3.
+Se muestra la página principal del sitio web con el encabezado, menú de navegación, presentación del negocio y video decorativo.
 
 ---
+
+## Captura 2 - Servicios
+
+capturas/02-servicios.png
+
+Se observan las tarjetas de servicios con sus respectivas imágenes.
+
+---
+
+## Captura 3 - Video decorativo
+
+capturas/03-video.png
+
+Se evidencia el contenedor personalizado del video utilizando gradientes, bordes redondeados y sombras.
+
+---
+
+## Captura 4 - Opiniones de clientes
+
+capturas/04-opiniones.png
+
+Se muestran las opiniones utilizando las etiquetas semánticas `blockquote` y `cite`.
+
+---
+
+## Captura 5 - Ubicación y contacto
+
+capturas/05-ubicacion.png
+
+Se visualiza el mapa, los datos de contacto y los enlaces externos.
+
+---
+
+## Captura 6 - Página servicios.html
+
+capturas/06-servicios-html.png
+
+Vista general de la segunda página.
+
+---
+
+## Captura 7 - Tabla de precios
+
+capturas/07-tabla.png
+
+Tabla de precios utilizando `colspan`.
+
+---
+
+## Captura 8 - Formulario
+
+![Formularioformulario.png
+
+Formulario de contacto con diferentes tipos de campos.
+
+---
+
+## Captura 9 - Diseño responsive
+
+capturas/09-responsive.png
+
+Visualización del sitio en una pantalla de 360 píxeles de ancho.
+
+---
+
+## Captura 10 - Conflicto de especificidad 1
+
+capturas/10-conflicto-1.png
+
+Conflicto entre:
+
+```css
+.servicios__tarjeta p
+```
+
+y
+
+```css
+.servicios__tarjeta--destacada p
+```
+
+---
+
+## Captura 11 - Conflicto de especificidad 2
+
+capturas/11-conflicto-2.png
+
+Conflicto entre:
+
+```css
+.footer a{
+    color:red;
+}
+```
+
+y
+
+```css
+.footer a{
+    color:white;
+}
+```
+
+---
+
+## Captura 12 - Conflicto de especificidad 3
+
+![Confas/12-conflicto-3.png
+
+Conflicto entre:
+
+```css
+article p
+```
+
+y
+
+```css
+.servicios__tarjeta p
+```
+
+---
+
+## Captura 13 - Inspector del navegador
+
+capturas/13-inspector.png
+
+Visualización del Inspector de elementos mostrando la regla CSS que prevalece según la especificidad.
+
 
 # Conclusiones
 
