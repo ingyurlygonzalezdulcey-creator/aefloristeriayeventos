@@ -354,7 +354,7 @@ a[target="_blank"]{
 /* =====================================
    FOOTER
 ===================================== */
-.footer{
+.footer {
     text-align: center;
     padding: 2rem;
     background: linear-gradient(
@@ -364,11 +364,14 @@ a[target="_blank"]{
     );
     color: white;
 }
-.footer a{
-    color: white;
+.footer a {
+    color: red;
     text-decoration: none;
 }
-.footer a:hover{
+.footer a {
+    color: white;
+}
+.footer a:hover {
     text-decoration: underline;
 }
 /* =====================================
@@ -433,4 +436,17 @@ a[target="_blank"]{
 .servicios__tarjeta--destacada p {
     color: green;
 }
+
+/* =====================================
+   CONFLICTO 3: ETIQUETA FRENTE A CLASE
+===================================== */
+article p {
+    font-size: 1rem;
+}
+
+.servicios__tarjeta p {
+    font-size: 1.05rem;
+}
+
+
 

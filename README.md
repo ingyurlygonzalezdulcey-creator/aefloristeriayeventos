@@ -459,17 +459,6 @@ El texto se mostrará con un tamaño de `1.05rem`, siempre que ninguna otra decl
 
 ![Evidencia del conflicto de especificidad 3](capturas/12-conflicto-3.png)
 
-### 9.4. Cómo comprobar los conflictos
-
-Para documentar las pruebas:
-
-1. Abre la página correspondiente en el navegador.
-2. Haz clic derecho sobre el elemento y selecciona **Inspeccionar**.
-3. En el panel de estilos, localiza las reglas que afectan al elemento.
-4. Comprueba cuál de las declaraciones aparece tachada.
-5. Guarda una captura donde se vean el elemento seleccionado y las reglas que compiten.
-
-**Importante:** si los selectores de ejemplo no existen en tu hoja de estilos o no afectan al mismo elemento, reemplázalos por conflictos reales del proyecto. No presentes una captura inventada como evidencia.
 
 ---
 
@@ -505,24 +494,9 @@ Ejemplo:
 
 **Solución aplicada, si corresponde:** utilizar una Media Query para organizar los enlaces en columna cuando la pantalla tiene un ancho reducido.
 
-### Problemas adicionales
-
-Si durante las pruebas encontraste errores en las rutas de imágenes, los enlaces entre páginas, la tabla o el formulario, puedes documentarlos indicando:
-
-- **Problema:** qué comportamiento no funcionaba.
-- **Causa:** por qué ocurría.
-- **Solución:** qué cambio realizaste.
-- **Resultado:** cómo comprobaste que se corrigió.
-
-No es necesario afirmar que todos los ejemplos anteriores ocurrieron. Conserva únicamente los que correspondan a tu proceso real de desarrollo.
-
 ---
 
 ## 11. Evidencias y capturas
-
-Las capturas permiten demostrar el funcionamiento y la presentación del sitio, además de documentar las pruebas técnicas realizadas.
-
-Guarda las imágenes dentro de la carpeta `capturas/` y utiliza rutas relativas a la raíz del repositorio.
 
 ### 11.1. Página principal
 
@@ -578,7 +552,7 @@ Se presenta una vista general de `servicios.html`.
 
 ![Tabla de servicios](capturas/07-tabla-servicios.png)
 
-Se evidencia la tabla implementada en la segunda página. Si utiliza `colspan`, la captura debe mostrar el encabezado o la fila donde se aplica.
+Se evidencia la tabla implementada en la segunda página. Si utiliza `colspan`.
 
 ### 11.8. Formulario de contacto
 
@@ -594,7 +568,7 @@ Se muestra el formulario y los campos implementados para recopilar información 
 
 ![Diseño responsive](capturas/09-responsive.png)
 
-Se evidencia la adaptación del sitio a una pantalla de 360 píxeles de ancho. Comprueba ambas páginas y verifica que no exista un desbordamiento horizontal no deseado.
+Se evidencia la adaptación del sitio a una pantalla de 360 píxeles de ancho.
 
 ### 11.10. Conflicto de especificidad 1
 
@@ -633,8 +607,6 @@ Se presenta el inspector de elementos con las declaraciones CSS y la regla que p
 ---
 
 ## 12. Publicación del proyecto
-
-El repositorio debe contener los archivos HTML, CSS, las imágenes utilizadas, el video si forma parte del sitio y la documentación técnica.
 
 **Repositorio público de GitHub:** [Pegar aquí la URL del repositorio]
 
