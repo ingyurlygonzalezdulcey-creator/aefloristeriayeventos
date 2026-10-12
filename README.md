@@ -342,7 +342,8 @@ capturas/
 
 ## Captura 1 - Página principal
 
-![Pturas/01-index.png
+![Página principal](capturas/01-index.png)
+
 
 Se muestra la página principal del sitio web con el encabezado, menú de navegación, presentación del negocio y video decorativo.
 

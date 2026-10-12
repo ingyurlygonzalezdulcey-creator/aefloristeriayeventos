@@ -410,7 +410,6 @@ a[target="_blank"]{
     .ubicacion iframe{
         height: 250px;
     }
-    @media (max-width: 360px){
     .nav__lista{
         display: flex;
         flex-direction: column;
@@ -425,4 +424,4 @@ a[target="_blank"]{
         font-size: 1rem;
     }
 }
-}
+
