@@ -625,6 +625,7 @@ Se presenta el inspector de elementos con las declaraciones CSS y la regla que p
 
 **Sitio publicado en GitHub Pages:** https://ingyurlygonzalezdulcey-creator.github.io/aefloristeriayeventos/
 
+**DeepWiki:** https://deepwiki.com/ingyurlygonzalezdulcey-creator/aefloristeriayeventos 
 ---
 
 ## 13. Conclusiones
