@@ -1,0 +1,411 @@
+/* =====================================
+   VARIABLES DEL SITIO
+===================================== */
+:root{
+    --color-principal:#4f6f52;
+    --color-secundario:#c9a227;
+    --color-fondo:#faf8f3;
+    --color-blanco:#ffffff;
+    --color-texto:#333333;
+    --color-borde:#e2d6b5;
+    --sombra:0 8px 20px rgba(0,0,0,0.08);
+    --radio:15px;
+    --transicion:0.3s ease;
+}
+/* =====================================
+   RESET GENERAL
+===================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:var(--color-fondo);
+    color:var(--color-texto);
+    font-family:Georgia, serif;
+    line-height:1.7;
+    overflow-wrap:break-word;
+    word-break: break-word;
+}
+/* =====================================
+   CONTENEDOR PRINCIPAL
+===================================== */
+main{
+    max-width:1300px;
+    margin:auto;
+    padding:2rem;
+}
+/* =====================================
+   HEADER
+===================================== */
+.header{
+    text-align:center;
+    padding:4rem 2rem;
+    background-image:
+    linear-gradient(
+        rgba(79,111,82,.85),
+        rgba(79,111,82,.55)
+    ),
+    url("../imagenes/arreglo-floral.jpg");
+    background-position:center;
+    background-size:cover;
+    color:white;
+}
+.header h1{
+    font-size:3rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    animation:aparecer 1s ease;
+}    
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.header h1::after{
+    content:"";
+    display:block;
+    width:100px;
+    height:3px;
+    margin:1rem auto;
+    background-color:var(--color-secundario);
+}
+/* =====================================
+   MENÚ
+===================================== */
+.nav__lista{
+    display:flex;
+    justify-content:center;
+    gap:2rem;
+    list-style:none;
+    margin-top:1.5rem;
+}
+.nav__lista a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+.nav__lista a:hover{
+    color:var(--color-secundario);
+}
+/* =====================================
+   TITULOS
+===================================== */
+section{
+    margin:4rem 0;
+}
+section h2{
+    text-align:center;
+    color:var(--color-principal);
+    margin-bottom:2rem;
+    border-bottom:2px solid var(--color-secundario);
+    padding-bottom:.5rem;
+}
+section h2::before{
+    content:"✿ ";
+    color:var(--color-secundario);
+}
+/* =====================================
+   TITULO DEL VIDEO
+===================================== */
+.video-titulo{
+    text-align:center;
+    color:var(--color-principal);
+    margin:2rem 0 1rem 0;
+    font-size:1.4rem;
+    letter-spacing:1px;
+}
+/* =====================================
+   MARCO DECORATIVO DEL VIDEO
+===================================== */
+.video-marco{
+    width:90%;
+    max-width:850px;
+    margin:2rem auto 3rem auto;
+    padding:20px;
+    background:
+    linear-gradient(
+        135deg,
+        #b18b2c,
+        #f7e6a8,
+        #c9a227,
+        #f7e6a8,
+        #b18b2c
+    );
+    border-radius:30px;
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.20);
+    position:relative;
+}
+.video-marco::before{
+    content:"✿ ✿ ✿ ✿";
+    position:absolute;
+    top:-18px;
+    left:50%;
+    transform:translateX(-50%);
+    background:var(--color-fondo);
+    color:var(--color-secundario);
+    padding:0 15px;
+    font-size:1.4rem;
+}
+.video-marco::after{
+    content:"✿ ✿ ✿ ✿";
+    position:absolute;
+    bottom:-18px;
+    left:50%;
+    transform:translateX(-50%);
+    background:var(--color-fondo);
+    color:var(--color-secundario);
+    padding:0 15px;
+    font-size:1.4rem;
+}
+.video-marco video{
+    display:block;
+    width:100%;
+    border:6px solid white;
+    border-radius:20px;
+    background:white;
+}
+/* =====================================
+   SERVICIOS
+===================================== */
+.servicios__contenedor{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap:2rem;
+}
+.servicios__tarjeta{
+    background:white;
+    padding:1.5rem;
+    border-top:3px solid var(--color-secundario);
+    border-right:1px solid var(--color-borde);
+    border-bottom:1px solid var(--color-borde);
+    border-left:1px solid var(--color-borde);
+    border-radius:var(--radio);
+    box-shadow:var(--sombra);
+    overflow:hidden;
+    transition:var(--transicion);
+}
+.servicios__tarjeta:hover{
+    transform:translateY(-5px);
+}
+.servicios__tarjeta h3{
+    color:var(--color-principal);
+    margin-bottom:1rem;
+}
+/* COMBINADOR */
+.servicios__tarjeta > p{
+    text-align:justify;
+}
+.servicios__tarjeta img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.10);
+    margin-bottom:1rem;
+}
+/* PSEUDOCLASE ESTRUCTURAL */
+.servicios__tarjeta:nth-child(2){
+    border:2px solid var(--color-secundario);
+}
+/* =====================================
+   LISTAS
+===================================== */
+ul{
+    list-style:square;
+    margin-left:2rem;
+}
+ol{
+    margin-left:2rem;
+}
+ul li::marker{
+    color:var(--color-secundario);
+}
+/* =====================================
+   OPINIONES
+===================================== */
+.opiniones__tarjeta{
+    background:white;
+    padding:2rem;
+    margin-bottom:2rem;
+    border-radius:var(--radio);
+    box-shadow:var(--sombra);
+}
+blockquote{
+    font-style:italic;
+    margin-bottom:1rem;
+}
+cite{
+    color:var(--color-principal);
+    font-weight:bold;
+}
+/* =====================================
+   UBICACIÓN
+===================================== */
+.ubicacion{
+    text-align:center;
+}
+.ubicacion iframe{
+    width:100%;
+    max-width:800px;
+    height:400px;
+    margin:2rem auto;
+    border:none;
+    border-radius:var(--radio);
+    box-shadow:var(--sombra);
+    display:block;
+}
+/* =====================================
+   TABLA
+===================================== */
+.tabla-precios{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:var(--sombra);
+}
+.tabla-precios thead{
+    background:
+    linear-gradient(
+    90deg,
+    var(--color-principal),
+    var(--color-secundario)
+    );
+    color:white;
+}
+.tabla-precios th,
+.tabla-precios td{
+    padding:1rem;
+    text-align:center;
+    border:1px solid var(--color-borde);
+}
+.tabla-precios tbody tr:hover{
+    background:#f5f0df;
+}
+/* =====================================
+   FORMULARIO
+===================================== */
+.contacto form{
+    max-width:700px;
+    margin:auto;
+    padding:2rem;
+    background:white;
+    border-radius:var(--radio);
+    box-shadow:var(--sombra);
+}
+.contacto label{
+    display:block;
+    margin-top:1rem;
+    font-weight:bold;
+}
+.contacto input,
+.contacto textarea,
+.contacto select{
+    width:100%;
+    padding:.8rem;
+    margin-top:.5rem;
+    border:1px solid #cccccc;
+    border-radius:8px;
+}
+.contacto button{
+    margin-top:1.5rem;
+    padding:1rem 2rem;
+    border:none;
+    border-radius:8px;
+    background-color:var(--color-principal);
+    color:white;
+    cursor:pointer;
+    transition:var(--transicion);
+}
+.contacto button:hover{
+    background-color:var(--color-secundario);
+}
+/* =====================================
+   ACCESIBILIDAD Y NAVEGACIÓN
+===================================== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-secundario);
+    outline-offset: 4px;
+}
+section:target {
+    scroll-margin-top: 2rem;
+    outline: 2px solid var(--color-borde);
+    outline-offset: 8px;
+}
+/* =====================================
+   SELECTOR DE ATRIBUTO
+===================================== */
+a[target="_blank"]{
+    color:var(--color-principal);
+    font-weight:bold;
+}
+/* =====================================
+   FOOTER
+===================================== */
+.footer{
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(
+        135deg,
+        var(--color-principal),
+        #38533b
+    );
+    color: white;
+}
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+/* =====================================
+   DISEÑO RESPONSIVE
+===================================== */
+@media (max-width: 360px) {
+    main{
+        padding: 1rem;
+    }
+    .header{
+        padding: 2.5rem 1rem;
+    }
+    .header h1{
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    .nav__lista{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .video-marco{
+        width: 100%;
+        padding: 12px;
+    }
+    .servicios__contenedor{
+        grid-template-columns: 1fr;
+    }
+    .servicios__tarjeta{
+        padding: 1rem;
+    }
+    .servicios__tarjeta img{
+        height: 220px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .ubicacion iframe{
+        height: 250px;
+    }
+}

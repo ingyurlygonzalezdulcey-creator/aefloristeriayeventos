@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Servicios, precios y contacto de AE Floristería y Eventos.">
+    <title>Servicios y Contacto | AE Floristería y Eventos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Encabezado y navegación -->
+    <header class="header">
+        <h1>AE Floristería y Eventos</h1>
+        <nav aria-label="Navegación principal">
+            <ul class="nav__lista">
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#opiniones">Opiniones</a></li>
+                <li><a href="index.html#ubicacion">Ubicación</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Tabla de precios -->
+        <section id="precios" class="precios">
+            <h2>Nuestros planes y tarifas</h2>
+            <p>
+                Conoce algunas de nuestras opciones en
+                arreglos florales y decoracion para tus eventos especiales.
+            </p>
+            <table class="tabla-precios">
+                <caption>Lista de servicios y precios 2026</caption>
+                <thead>
+                    <tr>
+                        <th colspan="3">Servicios de AE Floristería y Eventos</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Servicio</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="rowgroup" rowspan="2">Arreglos florales</th>
+                        <td>Ramo básico: arreglo floral sencillo</td>
+                        <td>$80.000 COP</td>
+                    </tr>
+                    <tr>
+                        <td>Ramo premium: diseño personalizado</td>
+                        <td>$150.000 COP</td>
+                    </tr>
+                    <tr>
+                        <th scope="rowgroup" rowspan="3">Decoración de eventos</th>
+                        <td>Decoración de cumpleaños</td>
+                        <td>$800.000 COP</td>
+                    </tr>
+                    <tr>
+                        <td>Decoración de bodas</td>
+                        <td>$8.000.000 COP</td>
+                    </tr>
+                    <tr>
+                        <td>Decoración de quince años</td>
+                        <td>$8.000.000 COP</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                <a href="#contacto">Solicitar una cotización</a>
+            </p>
+        </section>
+        <!-- Formulario de contacto -->
+        <section id="contacto" class="contacto">
+            <h2>Solicita tu cotización</h2>
+            <p>
+                Completa el siguiente formulario y pronto nos pondremos
+                en contacto contigo.
+            </p>
+            <form action="#" method="post">
+                <div>
+                    <label for="nombre">Nombre completo:</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Escribe tu nombre"
+                        required>
+                </div>
+                <div>
+                    <label for="correo">Correo electrónico:</label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                        required>
+                </div>
+                <div>
+                    <label for="telefono">Teléfono:</label>
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="Escribe tu número"
+                        required>
+                </div>
+                <div>
+                    <label for="fecha">Fecha del evento:</label>
+                    <input
+                        type="date"
+                        id="fecha"
+                        name="fecha">
+                </div>
+                <div>
+                    <label for="servicio">Servicio de interés:</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Seleccione un servicio</option>
+                        <option value="arreglos-florales">Arreglos florales</option>
+                        <option value="bodas">Decoración de bodas</option>
+                        <option value="quince-anos">Quince años</option>
+                        <option value="cumpleanos">Decoración de cumpleaños</option>
+                        <option value="eventos-corporativos">Eventos corporativos</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="mensaje">
+                        Cuéntanos cómo es tu evento:
+                    </label>
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        rows="6"
+                        placeholder="Describe tu evento, tus ideas y los detalles que deseas..."></textarea>
+                </div>
+                <button type="submit">
+                    Enviar solicitud
+                </button>
+            </form>
+            <p>
+                También puedes consultar nuestros datos de contacto
+                en la sección de
+                <a href="index.html#ubicacion">ubicación</a>.
+            </p>
+        </section>
+    </main>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>
+            &copy; 2026 AE Floristería y Eventos.
+            Todos los derechos reservados.
+        </p>
+        <a href="index.html">Volver a la página principal</a>
+    </footer>
+</body>
+</html>
+
