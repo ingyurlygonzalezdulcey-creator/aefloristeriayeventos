@@ -621,20 +621,9 @@ Se presenta el inspector de elementos con las declaraciones CSS y la regla que p
 
 ## 12. Publicación del proyecto
 
-**Repositorio público de GitHub:** Repositorio https://github.com/ingyurlygonzalezdulcey-creator/aefloristeriayeventos
+**Repositorio público de GitHub:** https://github.com/ingyurlygonzalezdulcey-creator/aefloristeriayeventos
 
-**Sitio publicado en GitHub Pages:** [Pegar aquí la URL del sitio]
-
-Antes de entregar, verifica que:
-
-- El repositorio sea público, según lo solicitado en la actividad.
-- Las dos páginas HTML estén disponibles.
-- Los enlaces de navegación funcionen correctamente.
-- Las imágenes y el video carguen sin errores.
-- El sitio pueda visualizarse desde un celular.
-- Las rutas de los recursos funcionen también en GitHub Pages.
-- Las capturas de evidencia estén incluidas en el repositorio.
-- El README se visualice correctamente en GitHub.
+**Sitio publicado en GitHub Pages:** https://ingyurlygonzalezdulcey-creator.github.io/aefloristeriayeventos/
 
 ---
 
